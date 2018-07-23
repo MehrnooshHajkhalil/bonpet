@@ -59,7 +59,12 @@ export default class ButtonSubmit extends Component {
             this.growAnimated.setValue(0);
         }, 2300);
 
-        navigate("Second",{name:"Mehrnoosh"})
+        //check if user is first time login go to slider else go to home page
+        if(true){
+            navigate("Slider",{name:"Mehrnoosh"})
+        }else{
+
+        }
     }
 
     _onGrow() {

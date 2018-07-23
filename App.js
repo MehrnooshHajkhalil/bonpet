@@ -5,11 +5,14 @@ import { createStackNavigator } from "react-navigation";
 
 import LoginPage from "./src/pages/login-page/login-page";
 import MainPage from "./src/pages/main-page/main-page";
+import Slider from "./src/pages/slider-page/slider-page";
+
 
 
 const Navigation = createStackNavigator({
      First:{screen:LoginPage},
-     Second:{screen:MainPage},
+     Home:{screen:MainPage},
+     Slider:{screen:Slider},
 
 })
 
