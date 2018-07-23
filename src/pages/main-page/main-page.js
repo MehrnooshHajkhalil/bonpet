@@ -9,7 +9,7 @@ import { createStackNavigator } from "react-navigation";
         super();
     }
      static navigationOption={
-         title:'Main screen'
+         title:'Home screen'
      }
 
     render() {

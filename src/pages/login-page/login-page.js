@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { AppRegistry,Text, View, StyleSheet,Button } from 'react-native';
 import { Constants } from 'expo';
-import { createStackNavigator } from "react-navigation";
+import Logo from './Logo';
+import Form from './Form';
+import Wallpaper from './Wallpaper';
+import ButtonSubmit from './ButtonSubmit';
+import SignupSection from './SignupSection';
+
 
  class Login extends Component {
     constructor() {
@@ -12,14 +17,14 @@ import { createStackNavigator } from "react-navigation";
     }
 
     render() {
-        var {navigate} = this.props.navigation;
+
         return (
-            <View style={styles.container}>
-                <Text>
-                    Login page
-                </Text>
-                <Button title="Go to Home page" onPress={()=>navigate("Second",{name:"Mehrnoosh"})}>Go to about Home</Button>
-            </View>
+            <Wallpaper>
+                <Logo />
+                <Form />
+                <SignupSection />
+                <ButtonSubmit navigation={this.props.navigation} />
+            </Wallpaper>
         );
     }
 }
