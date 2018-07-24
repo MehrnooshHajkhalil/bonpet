@@ -23,7 +23,7 @@ class Slider extends Component {
                     <Text style={styles.text}>Beautiful</Text>
                 </View>
                 <View style={styles.slide3} last >
-                    <Button title={'Home Page'} onPress={()=>navigate("Home",{name:'Mehrnoosh'})}>Let's go</Button>
+                    <Button title={'Let`s start'} onPress={()=>navigate("Home",{name:'Mehrnoosh'})}>Let's go</Button>
                 </View>
             </Swiper>
         );

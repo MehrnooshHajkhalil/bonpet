@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {StyleSheet, View, Text, Image} from 'react-native';
 
-import logoImg from '../../../public/logo.png';
+import logoImg from '../public/logo.png';
 
 export default class Logo extends Component {
     render() {

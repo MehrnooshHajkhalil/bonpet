@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { AppRegistry,Text, View, StyleSheet,Button } from 'react-native';
 import { Constants } from 'expo';
-import Logo from './Logo';
-import Form from './Form';
-import Wallpaper from './Wallpaper';
-import ButtonSubmit from './ButtonSubmit';
+import Logo from '../../../components/Logo';
+import Form from '../../../components/Form';
+import Wallpaper from '../../../components/Wallpaper';
+import ButtonSubmit from '../../../components/ButtonSubmit';
 import Dimensions from 'Dimensions';
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
@@ -27,7 +27,7 @@ const MARGIN = 40;
                 <Form />
                 <ButtonSubmit navigation={this.props.navigation} />
                 <View style={styles.containerCreate}>
-                    <Button title={'Create User'} onPress={()=>navigate("Register",{})} >Create User</Button>
+                    <Button title={'Create User'} onPress={()=>navigate("Register",{navigation:this.props.navigation})} >Create User</Button>
                     <Text style={styles.text}>Forgot Password?</Text>
                 </View>
             </Wallpaper>

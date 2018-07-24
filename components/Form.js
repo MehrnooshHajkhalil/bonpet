@@ -11,9 +11,9 @@ import {
 } from 'react-native';
 
 import UserInput from './UserInput';
-import usernameImg from '../../../public/username.png';
-import passwordImg from '../../../public/password.png';
-import eyeImg from '../../../public/eye_black.png';
+import usernameImg from '../public/username.png';
+import passwordImg from '../public/password.png';
+import eyeImg from '../public/eye_black.png';
 
 export default class Form extends Component {
     constructor(props) {
