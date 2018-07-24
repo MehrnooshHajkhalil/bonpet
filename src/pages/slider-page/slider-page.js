@@ -15,14 +15,14 @@ class Slider extends Component {
 
         var {navigate} = this.props.navigation;
         return (
-            <Swiper style={styles.wrapper} showsButtons={true}>
+            <Swiper style={styles.wrapper} showsButtons={false}>
                 <View style={styles.slide1}>
                     <Text style={styles.text}>Hello Swiper</Text>
                 </View>
                 <View style={styles.slide2}>
                     <Text style={styles.text}>Beautiful</Text>
                 </View>
-                <View style={styles.slide3}>
+                <View style={styles.slide3} last >
                     <Button title={'Home Page'} onPress={()=>navigate("Home",{name:'Mehrnoosh'})}>Let's go</Button>
                 </View>
             </Swiper>

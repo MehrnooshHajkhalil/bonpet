@@ -11,9 +11,6 @@ import {
 } from 'react-native';
 
 import UserInput from './UserInput';
-import ButtonSubmit from './ButtonSubmit';
-import SignupSection from './SignupSection';
-
 import usernameImg from '../../../public/username.png';
 import passwordImg from '../../../public/password.png';
 import eyeImg from '../../../public/eye_black.png';

@@ -8,6 +8,7 @@ import {
     Animated,
     Easing,
     Image,
+    Button,
     Alert,
     View,
 } from 'react-native';
@@ -35,6 +36,11 @@ export default class ButtonSubmit extends Component {
         title:'Login screen'
     }
 
+    handleClick =()=>{
+        var {navigate} = this.props.navigation;
+        navigate("Register",{})
+
+    }
 
     _onPress() {
 
@@ -104,6 +110,7 @@ export default class ButtonSubmit extends Component {
                     />
                 </Animated.View>
             </View>
+
         );
     }
 }
@@ -115,6 +122,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-start',
     },
+
     button: {
         alignItems: 'center',
         justifyContent: 'center',

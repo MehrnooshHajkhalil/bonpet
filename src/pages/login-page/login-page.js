@@ -5,8 +5,11 @@ import Logo from './Logo';
 import Form from './Form';
 import Wallpaper from './Wallpaper';
 import ButtonSubmit from './ButtonSubmit';
-import SignupSection from './SignupSection';
+import Dimensions from 'Dimensions';
 
+const DEVICE_WIDTH = Dimensions.get('window').width;
+const DEVICE_HEIGHT = Dimensions.get('window').height;
+const MARGIN = 40;
 
  class Login extends Component {
     constructor() {
@@ -17,13 +20,16 @@ import SignupSection from './SignupSection';
     }
 
     render() {
-
+        var {navigate} = this.props.navigation;
         return (
             <Wallpaper>
                 <Logo />
                 <Form />
-                <SignupSection />
                 <ButtonSubmit navigation={this.props.navigation} />
+                <View style={styles.containerCreate}>
+                    <Button title={'Create User'} onPress={()=>navigate("Register",{})} >Create User</Button>
+                    <Text style={styles.text}>Forgot Password?</Text>
+                </View>
             </Wallpaper>
         );
     }
@@ -36,6 +42,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         paddingTop: Constants.statusBarHeight,
         backgroundColor: '#eee',
+    },
+    containerCreate: {
+        flex: 1,
+        top: 65,
+        width: DEVICE_WIDTH,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
     },
     formView: {
         borderBottomWidth: 1,
