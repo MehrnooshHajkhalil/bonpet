@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { Container, Header, View, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Body, Icon } from 'native-base';
-import { AppRegistry, StyleSheet,Button,Image } from 'react-native';
+import { Container, Header, View, DeckSwiper, Drawer, Card, CardItem, Thumbnail, Text, Left, Body, Icon } from 'native-base';
+import { StyleSheet, Image } from 'react-native';
 import { Constants } from 'expo';
-import { createStackNavigator } from "react-navigation";
-
-import plus from '../../../public/plus.jpeg'
+import SideBar from '../sidebar/sidebar';
 
 const cards = [
     {
@@ -33,11 +31,30 @@ const cards = [
      }
 
     render() {
+
+        closeDrawer = () => {
+            this.drawer._root.close()
+        };
+        openDrawer = () => {
+            this.drawer._root.open()
+        };
+
         var {params} = this.props.navigation.state;
         var {navigate} = this.props.navigation;
         const uri = "https://facebook.github.io/react-native/docs/assets/favicon.png";
         return (
+
+
             <View>
+
+                {/*<Drawer*/}
+                    {/*ref={(ref) => { this.drawer = ref; }}*/}
+                    {/*content={<SideBar navigator={this.navigator} />}*/}
+                    {/*onClose={() => this.closeDrawer()} >*/}
+
+
+
+                {/*</Drawer>*/}
 
                 <View style={{ height: 40 }}>
                     <Text>
@@ -124,3 +141,7 @@ const styles = StyleSheet.create({
 });
 
  export default  Home
+
+
+
+
