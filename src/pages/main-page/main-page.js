@@ -1,8 +1,28 @@
 import React, { Component } from 'react';
-import { AppRegistry,Text, View, StyleSheet,Button } from 'react-native';
+import { Container, Header, View, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Body, Icon } from 'native-base';
+import { AppRegistry, StyleSheet,Button,Image } from 'react-native';
 import { Constants } from 'expo';
 import { createStackNavigator } from "react-navigation";
 
+import plus from '../../../public/plus.jpeg'
+
+const cards = [
+    {
+        text: 'Card One',
+        name: 'One',
+        image: require('../../../public/1.png'),
+    },
+    {
+        text: 'Card Two',
+        name: 'Two',
+        image: require('../../../public/2.png'),
+    },
+    {
+        text: 'Card Three',
+        name: 'Three',
+        image: require('../../../public/3.png'),
+    },
+];
 
  class Home extends Component {
     constructor() {
@@ -15,16 +35,54 @@ import { createStackNavigator } from "react-navigation";
     render() {
         var {params} = this.props.navigation.state;
         var {navigate} = this.props.navigation;
+        const uri = "https://facebook.github.io/react-native/docs/assets/favicon.png";
         return (
-            <View style={styles.container}>
-                <Text>
-                   HomePage
-                </Text>
+            <View>
 
-                <Text>
-                    Param is :{params.name}
-                </Text>
-                <Button title={'Login'} onPress={()=>navigate("First",{})}>Go to about page</Button>
+                <View style={{ height: 40 }}>
+                    <Text>
+
+                    </Text>
+                </View>
+                <View style={{flex: 1, flexDirection: 'row'}}>
+                    <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
+                    <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
+                    <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
+                    <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
+                </View>
+
+                <View style={{ height: 100 }}>
+                    <Text>
+
+                    </Text>
+                </View>
+                <View style={{flex: 1}}>
+                    <DeckSwiper
+                        dataSource={cards}
+                        renderItem={item =>
+                            <Card style={{ elevation: 3 }}>
+                                <CardItem>
+                                    <Left>
+                                        <Thumbnail source={item.image} />
+                                        <Body>
+                                        <Text>{item.text}</Text>
+                                        <Text note>NativeBase</Text>
+                                        </Body>
+                                    </Left>
+                                </CardItem>
+                                <CardItem cardBody>
+                                    <Image style={{ height: 300, flex: 1 }} source={item.image} />
+                                </CardItem>
+                                <CardItem>
+                                    <Icon name="heart" style={{ color: '#ED4A6A' }} />
+                                    <Text>{item.name}</Text>
+                                </CardItem>
+                            </Card>
+                        }
+                    />
+                </View>
+
+
             </View>
         );
     }

@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="794062c2-ce72-4b30-afbc-029d67d81163" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/public/plus.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login-page/ButtonSubmit.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ButtonSubmit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login-page/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login-page/Logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Logo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login-page/UserInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UserInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login-page/Wallpaper.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Wallpaper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login-page/login-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login-page/login-page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/register-page/register-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/register-page/register-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/main-page/main-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/main-page/main-page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/slider-page/slider-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/slider-page/slider-page.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,8 +22,8 @@
       <file leaf-file-name="register-page.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/register-page/register-page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            <state relative-caret-position="336">
+              <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -81,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="slider-page.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="slider-page.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/slider-page/slider-page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -93,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main-page.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main-page.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/main-page/main-page.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="37" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="37" />
+            <state relative-caret-position="315">
+              <caret line="50" column="80" selection-start-line="50" selection-start-column="80" selection-end-line="50" selection-end-column="80" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -139,9 +134,9 @@
       <find>StyleSheet</find>
       <find>navigate</find>
       <find>dime</find>
-      <find>showsButtons</find>
       <find>handleClick</find>
       <find>Hello</find>
+      <find>showsButtons</find>
       <find>Register</find>
     </findStrings>
     <replaceStrings>
@@ -165,7 +160,6 @@
         <option value="$PROJECT_DIR$/src/pages/login-page/Logo.js" />
         <option value="$PROJECT_DIR$/src/pages/login-page/UserInput.js" />
         <option value="$PROJECT_DIR$/src/pages/login-page/Wallpaper.js" />
-        <option value="$PROJECT_DIR$/src/pages/main-page/main-page.js" />
         <option value="$PROJECT_DIR$/src/pages/login-page/SignupSection.js" />
         <option value="$PROJECT_DIR$/src/pages/login-page/Form.js" />
         <option value="$PROJECT_DIR$/App.js" />
@@ -174,6 +168,7 @@
         <option value="$PROJECT_DIR$/src/pages/login-page/login-page.js" />
         <option value="$PROJECT_DIR$/src/pages/register-page/register-page.js" />
         <option value="$PROJECT_DIR$/src/pages/slider-page/slider-page.js" />
+        <option value="$PROJECT_DIR$/src/pages/main-page/main-page.js" />
       </list>
     </option>
   </component>
@@ -193,7 +188,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="84" />
     <option name="y" value="-1001" />
     <option name="width" value="1280" />
@@ -217,6 +212,11 @@
               <item name="bonpet" type="b2602c69:ProjectViewProjectNode" />
               <item name="bonpet" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bonpet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bonpet" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bonpet" type="b2602c69:ProjectViewProjectNode" />
@@ -277,8 +277,8 @@
       <recent name="$PROJECT_DIR$/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/src/pages/start-page" />
       <recent name="$PROJECT_DIR$/src/pages/main-page" />
       <recent name="$PROJECT_DIR$/src/pages/login-page" />
@@ -312,15 +312,15 @@
       <workItem from="1531982634199" duration="688000" />
       <workItem from="1531990981488" duration="24314000" />
       <workItem from="1532407006439" duration="641000" />
-      <workItem from="1532415657866" duration="12700000" />
+      <workItem from="1532415657866" duration="14648000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46970000" />
+    <option name="totallyTimeSpent" value="48918000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="84" y="-1001" width="1280" height="1001" extended-state="0" />
+    <frame x="84" y="-1001" width="1280" height="1001" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Key Promoter X" />
@@ -570,6 +570,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/slider-page/slider-page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/login-page/login-page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -582,8 +592,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/register-page/register-page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        <state relative-caret-position="336">
+          <caret line="41" column="28" lean-forward="true" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -592,18 +602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/main-page/main-page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="37" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/slider-page/slider-page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        <state relative-caret-position="315">
+          <caret line="50" column="80" selection-start-line="50" selection-start-column="80" selection-end-line="50" selection-end-column="80" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
