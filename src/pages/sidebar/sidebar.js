@@ -1,5 +1,5 @@
 import React from "react";
-import { AppRegistry, Image, StatusBar } from "react-native";
+import { AppRegistry, Image, StatusBar,ImageBackground } from "react-native";
 import { Container, Content, Text, List, ListItem } from "native-base";
 const routes = ["First", "Home", "Register"];
 
@@ -8,7 +8,7 @@ export default class SideBar extends React.Component {
         return (
             <Container>
                 <Content>
-                    <Image
+                    <ImageBackground
                         source={{
                             uri: "https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/react-navigation/img/drawer-cover.png"
                         }}
@@ -18,14 +18,14 @@ export default class SideBar extends React.Component {
                             justifyContent: "center",
                             alignItems: "center"
                         }}>
-                        <Image
+                        <ImageBackground
                             square
                             style={{ height: 80, width: 70 }}
                             source={{
                                 uri: "https://github.com/GeekyAnts/NativeBase-KitchenSink/raw/react-navigation/img/logo.png"
                             }}
                         />
-                    </Image>
+                    </ImageBackground>
                     <List
                         dataArray={routes}
                         renderRow={data => {

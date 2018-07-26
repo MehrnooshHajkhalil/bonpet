@@ -32,10 +32,6 @@ export default class ButtonSubmit extends Component {
         this._onPress = this._onPress.bind(this);
     }
 
-    static navigationOption={
-        title:'Login screen'
-    }
-
     handleClick =()=>{
         var {navigate} = this.props.navigation;
         navigate("Register",{})

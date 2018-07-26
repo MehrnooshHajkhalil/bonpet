@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import { Container, Header, View, DeckSwiper, Drawer, Card, CardItem, Thumbnail, Text, Left, Body, Icon } from 'native-base';
+import React, { Component } from "react";
+import { Container, Header, View, DeckSwiper, Drawer, Card, CardItem, Thumbnail, Text, Left,Right, Body, Icon,Content ,Button, Title } from 'native-base';
 import { StyleSheet, Image } from 'react-native';
 import { Constants } from 'expo';
-import SideBar from '../sidebar/sidebar';
 
 const cards = [
     {
@@ -22,15 +21,18 @@ const cards = [
     },
 ];
 
- class Home extends Component {
+ class Home extends React.Component {
+
     constructor() {
         super();
     }
-     static navigationOption={
-         title:'Home screen'
-     }
 
+    static navigationOption={
+        title:'Home screen'
+    }
     render() {
+
+        const uri = "https://facebook.github.io/react-native/docs/assets/favicon.png";
 
         closeDrawer = () => {
             this.drawer._root.close()
@@ -38,69 +40,70 @@ const cards = [
         openDrawer = () => {
             this.drawer._root.open()
         };
-
-        var {params} = this.props.navigation.state;
-        var {navigate} = this.props.navigation;
-        const uri = "https://facebook.github.io/react-native/docs/assets/favicon.png";
         return (
+            <Container>
+                <Header>
+                    <Left>
+                        <Button
+                            transparent
+                            onPress={() => this.props.navigation.navigate("DrawerOpen")}>
+                            <Icon name="menu" />
+                        </Button>
+                    </Left>
+                    <Body>
+                    <Title>Home Screen</Title>
+                    </Body>
+                    <Right />
+                </Header>
+                <Content padder>
 
+                        <View style={{ height: 40 }}>
+                            <Text>
 
-            <View>
+                            </Text>
+                        </View>
+                        <View style={{flex: 1, flexDirection: 'row'}}>
+                            <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
+                            <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
+                            <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
+                            <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
+                        </View>
 
-                {/*<Drawer*/}
-                    {/*ref={(ref) => { this.drawer = ref; }}*/}
-                    {/*content={<SideBar navigator={this.navigator} />}*/}
-                    {/*onClose={() => this.closeDrawer()} >*/}
+                        <View style={{ height: 100 }}>
+                            <Text>
 
+                            </Text>
+                        </View>
 
+                       <View style={{flex: 1}}>
+                         <DeckSwiper
+                            dataSource={cards}
+                            renderItem={item =>
+                                <Card style={{ elevation: 3 }}>
+                                    <CardItem>
+                                        <Left>
+                                            <Thumbnail source={item.image} />
+                                            <Body>
+                                            <Text>{item.text}</Text>
+                                            <Text note>NativeBase</Text>
+                                            </Body>
+                                        </Left>
+                                    </CardItem>
+                                    <CardItem cardBody>
+                                        <Image style={{ height: 300, flex: 1 }} source={item.image} />
+                                    </CardItem>
+                                    <CardItem>
+                                        <Icon name="heart" style={{ color: '#ED4A6A' }} />
+                                        <Text>{item.name}</Text>
+                                    </CardItem>
+                                </Card>
+                            }
+                        />
+                     </View>
 
-                {/*</Drawer>*/}
+                </Content>
 
-                <View style={{ height: 40 }}>
-                    <Text>
-
-                    </Text>
-                </View>
-                <View style={{flex: 1, flexDirection: 'row'}}>
-                    <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
-                    <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
-                    <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
-                    <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
-                </View>
-
-                <View style={{ height: 100 }}>
-                    <Text>
-
-                    </Text>
-                </View>
-                <View style={{flex: 1}}>
-                    <DeckSwiper
-                        dataSource={cards}
-                        renderItem={item =>
-                            <Card style={{ elevation: 3 }}>
-                                <CardItem>
-                                    <Left>
-                                        <Thumbnail source={item.image} />
-                                        <Body>
-                                        <Text>{item.text}</Text>
-                                        <Text note>NativeBase</Text>
-                                        </Body>
-                                    </Left>
-                                </CardItem>
-                                <CardItem cardBody>
-                                    <Image style={{ height: 300, flex: 1 }} source={item.image} />
-                                </CardItem>
-                                <CardItem>
-                                    <Icon name="heart" style={{ color: '#ED4A6A' }} />
-                                    <Text>{item.name}</Text>
-                                </CardItem>
-                            </Card>
-                        }
-                    />
-                </View>
-
-
-            </View>
+            </Container>
         );
     }
 }
@@ -140,8 +143,4 @@ const styles = StyleSheet.create({
     },
 });
 
- export default  Home
-
-
-
-
+export default  Home
