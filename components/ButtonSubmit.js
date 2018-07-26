@@ -31,13 +31,6 @@ export default class ButtonSubmit extends Component {
         this.growAnimated = new Animated.Value(0);
         this._onPress = this._onPress.bind(this);
     }
-
-    handleClick =()=>{
-        var {navigate} = this.props.navigation;
-        navigate("Register",{})
-
-    }
-
     _onPress() {
 
         var {navigate} = this.props.navigation;
@@ -54,12 +47,12 @@ export default class ButtonSubmit extends Component {
             this._onGrow();
         }, 2000);
 
-        setTimeout(() => {
-            //Actions.secondScreen();
-            this.setState({isLoading: false});
-            this.buttonAnimated.setValue(0);
-            this.growAnimated.setValue(0);
-        }, 2300);
+        // setTimeout(() => {
+        //     //Actions.secondScreen();
+        //     this.setState({isLoading: false});
+        //     this.buttonAnimated.setValue(0);
+        //     this.growAnimated.setValue(0);
+        // }, 2300);
 
         //check if user is first time login go to slider else go to home page
         if(true){

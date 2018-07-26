@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Container, Header, View, DeckSwiper, Drawer, Card, CardItem, Thumbnail, Text, Left,Right, Body, Icon,Content ,Button, Title } from 'native-base';
-import { StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image, TouchableHighlight } from 'react-native';
 import { Constants } from 'expo';
+const  plus  = require('../../../public/plus.png')
 
 const cards = [
     {
@@ -30,6 +31,11 @@ const cards = [
     static navigationOption={
         title:'Home screen'
     }
+
+     handlePetProfile =(id) => {
+         var {navigate} = this.props.navigation;
+         navigate("Pet",{id:id})
+     }
     render() {
 
         const uri = "https://facebook.github.io/react-native/docs/assets/favicon.png";
@@ -63,10 +69,19 @@ const cards = [
                             </Text>
                         </View>
                         <View style={{flex: 1, flexDirection: 'row'}}>
-                            <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
-                            <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
-                            <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
-                            <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
+                            <TouchableHighlight onPress={ () => this.handlePetProfile(1) }>
+                              <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
+                            </TouchableHighlight>
+
+                            <TouchableHighlight onPress={ () => this.handlePetProfile(2) }>
+                              <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
+                            </TouchableHighlight>
+                            <TouchableHighlight onPress={ () => this.handlePetProfile(3) }>
+                              <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
+                            </TouchableHighlight>
+                            <TouchableHighlight onPress={ () => this.handlePetProfile() }>
+                              <Thumbnail  style={{width: 50, height: 50}} source={plus} />
+                            </TouchableHighlight>
                         </View>
 
                         <View style={{ height: 100 }}>
