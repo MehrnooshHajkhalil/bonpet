@@ -6,6 +6,7 @@ import { DrawerActions } from 'react-navigation';
 import styles from '../../styles/index';
 
 class DrawerScreen extends Component {
+
     navigateToScreen = (route) => () => {
         const navigateAction = NavigationActions.navigate({
             routeName: route
@@ -30,7 +31,7 @@ class DrawerScreen extends Component {
                             </Text>
                         </View>
                         <View style={styles.menuItem}>
-                            <Text onPress={this.navigateToScreen('pet')}>
+                            <Text onPress={this.navigateToScreen('Pet')}>
                                 pet
                             </Text>
                         </View>

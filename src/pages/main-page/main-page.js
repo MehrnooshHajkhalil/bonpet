@@ -59,27 +59,9 @@ const cards = [
 
         return (
             <Container>
-                <Header>
-                    <Left>
-                        <Button
-                            transparent
-                            onPress={() => this.props.navigation.toggleDrawer()}
-                        >
-                            <Icon name="menu" />
-                        </Button>
-                    </Left>
-                    <Body>
-                    <Title>Home Screen</Title>
-                    </Body>
-                    <Right />
-                </Header>
                 <Content padder>
 
-                        <View style={{ height: 40 }}>
-                            <Text>
 
-                            </Text>
-                        </View>
                         <View style={{flex: 1, flexDirection: 'row'}}>
                             <TouchableHighlight onPress={ () => this.handlePetProfile(1) }>
                               <Thumbnail style={{width: 50, height: 50}} source={{uri: uri}} />
@@ -96,7 +78,7 @@ const cards = [
                             </TouchableHighlight>
                         </View>
 
-                        <View style={{ height: 100 }}>
+                        <View style={{ height: 40 }}>
                             <Text>
 
                             </Text>

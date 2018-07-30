@@ -7,17 +7,17 @@ import LoginPage from "./src/pages/login-page/login-page";
 import MainPage from "./src/pages/main-page/main-page";
 import Slider from "./src/pages/slider-page/slider-page";
 import Register from "./src/pages/register-page/register-page";
-import Pet from "./src/pages/pet-page/pet-page";
+import PetPage from "./src/pages/pet-page/pet-page";
 import DrawerScreen from './src/pages/drawer-page/drawer-page';
 const menuIcon = require('./src/images/menu-button.png')
 const leftIcon = require('./src/images/left-arrow.png')
 
 const Tabs = createMaterialTopTabNavigator({
     Home: MainPage,
-    LoginPage: LoginPage,
+    Login: LoginPage,
     Slider: Slider,
     Register:Register,
-    Pet:Pet
+    Pet:PetPage
 },{
     tabBarOptions: {
         activeTintColor: '#000',
@@ -33,7 +33,13 @@ const Tabs = createMaterialTopTabNavigator({
 
 const DrawerNavigator = createDrawerNavigator({
     Home:{
-        screen: Tabs
+        screen: MainPage
+    },
+    Login:{
+        screen: LoginPage
+    },
+    Pet: {
+        screen: PetPage
     }
 },{
     initialRouteName: 'Home',
@@ -58,7 +64,7 @@ const StackNavigator = createStackNavigator({
     }
 },{
     navigationOptions: ({ navigation }) => ({
-        title: 'ReactNavigation',  // Title to appear in status bar
+        title: 'BonPet',  // Title to appear in status bar
         headerLeft:
             <TouchableOpacity  onPress={() => {navigation.dispatch(DrawerActions.toggleDrawer())} }>
                 <MenuImage style="styles.bar" navigation={navigation}/>
