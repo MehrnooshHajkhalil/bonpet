@@ -1,8 +1,15 @@
 import React, { Component } from "react";
-import { Container, Header, View, DeckSwiper, Drawer, Card, CardItem, Thumbnail, Text, Left,Right, Body, Icon,Content ,Button, Title } from 'native-base';
+import { Container, Header, View, DeckSwiper,ImageBackground, Card, CardItem,Drawer, Thumbnail, Text, Left,Right, Body, Icon,Content ,Button, Title } from 'native-base';
 import { StyleSheet, Image, TouchableHighlight } from 'react-native';
 import { Constants } from 'expo';
+import LoginPage from "../login-page/login-page";
+import Slider from "../slider-page/slider-page";
+import Register from "../register-page/register-page";
+import Pet from "../pet-page/pet-page";
+import {createDrawerNavigator} from "react-navigation";
 const  plus  = require('../../../public/plus.png')
+const  homeIcon  = require('../../../public/logo.png')
+
 
 const cards = [
     {
@@ -21,38 +28,43 @@ const cards = [
         image: require('../../../public/3.png'),
     },
 ];
-
  class Home extends React.Component {
+
+
+
+
 
     constructor() {
         super();
     }
 
-    static navigationOption={
-        title:'Home screen'
-    }
 
      handlePetProfile =(id) => {
          var {navigate} = this.props.navigation;
          navigate("Pet",{id:id})
      }
+
+     static navigationOptions = {
+         drawerLabel: 'Home',
+         drawerIcon: ({ tintColor }) => (
+             <ImageBackground
+                 source={homeIcon}
+                 style={[styles.icon, {tintColor: tintColor}]}
+             />
+         ),
+     };
     render() {
 
         const uri = "https://facebook.github.io/react-native/docs/assets/favicon.png";
 
-        closeDrawer = () => {
-            this.drawer._root.close()
-        };
-        openDrawer = () => {
-            this.drawer._root.open()
-        };
         return (
             <Container>
                 <Header>
                     <Left>
                         <Button
                             transparent
-                            onPress={() => this.props.navigation.navigate("DrawerOpen")}>
+                            onPress={() => this.props.navigation.toggleDrawer()}
+                        >
                             <Icon name="menu" />
                         </Button>
                     </Left>
@@ -130,6 +142,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         paddingTop: Constants.statusBarHeight,
         backgroundColor: '#eee',
+    },
+    icon: {
+        width: 24,
+        height: 24,
     },
     formView: {
         borderBottomWidth: 1,

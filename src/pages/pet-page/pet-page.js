@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, Form, Item, Input, Label, Button, Text, View } from 'native-base';
+import { Container, Header, Content, Form, Item,ImageBackground, Input, Label, Button, Text, View } from 'native-base';
 import { createStackNavigator } from 'react-navigation';
+import {StyleSheet} from "react-native";
+import {Constants} from "expo";
+const  petIcon  = require('../../../public/logo.png')
 
 class Pet extends React.Component {
 
@@ -12,6 +15,16 @@ class Pet extends React.Component {
         var {navigate} = this.props.navigation;
         navigate("Home",{})
     }
+
+    static navigationOptions = {
+        drawerLabel: 'Pet',
+        drawerIcon: ({ tintColor }) => (
+            <ImageBackground
+                source={petIcon}
+                style={[styles.icon, {tintColor: tintColor}]}
+            />
+        ),
+    };
     render(){
 
 
@@ -34,7 +47,12 @@ class Pet extends React.Component {
     }
 }
 
-
+const styles = StyleSheet.create({
+    icon: {
+        width: 24,
+        height: 24,
+    }
+});
 
  export default Pet
 

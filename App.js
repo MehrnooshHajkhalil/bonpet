@@ -1,25 +1,11 @@
-import React from "react";
 
-import LoginPage from "./src/pages/login-page/login-page";
-import MainPage from "./src/pages/main-page/main-page";
-import Slider from "./src/pages/slider-page/slider-page";
-import Pet from "./src/pages/pet-page/pet-page";
-import Register from "./src/pages/register-page/register-page";
-import SideBar from "./src/pages/sidebar/sidebar.js";
-import { createDrawerNavigator } from "react-navigation";
+import React,{Component} from 'react';
+import Navigator from './routes';
 
-const Navigation = createDrawerNavigator(
-    {
-        First:{screen:LoginPage},
-        Home:{screen:MainPage},
-        Register:{screen:Register},
-        Slider:{screen:Slider},
-        Pet:{screen:Pet},
-    },
-    {
-        contentComponent: props => <SideBar {...props} />
+export default class App extends Component{
+    render(){
+        return(
+            <Navigator/>
+        )
     }
-);
-
-export default Navigation;
-
+}
