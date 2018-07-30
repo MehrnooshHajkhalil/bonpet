@@ -7,7 +7,8 @@ import LoginPage from "./src/pages/login-page/login-page";
 import MainPage from "./src/pages/main-page/main-page";
 import Slider from "./src/pages/slider-page/slider-page";
 import Register from "./src/pages/register-page/register-page";
-import PetPage from "./src/pages/pet-page/pet-page";
+import PetAddPage from "./src/pages/pet-page/pet-add-page";
+import PetEditPage from "./src/pages/pet-page/pet-edit-page";
 import DrawerScreen from './src/pages/drawer-page/drawer-page';
 const menuIcon = require('./src/images/menu-button.png')
 const leftIcon = require('./src/images/left-arrow.png')
@@ -17,7 +18,8 @@ const Tabs = createMaterialTopTabNavigator({
     Login: LoginPage,
     Slider: Slider,
     Register:Register,
-    Pet:PetPage
+    PetAdd:PetAddPage,
+    PetEdit:PetEditPage
 },{
     tabBarOptions: {
         activeTintColor: '#000',
@@ -38,8 +40,11 @@ const DrawerNavigator = createDrawerNavigator({
     Login:{
         screen: LoginPage
     },
-    Pet: {
-        screen: PetPage
+    PetAdd: {
+        screen: PetAddPage
+    },
+    PetEdit: {
+        screen: PetEditPage
     }
 },{
     initialRouteName: 'Home',

@@ -5,7 +5,8 @@ import { Constants } from 'expo';
 import LoginPage from "../login-page/login-page";
 import Slider from "../slider-page/slider-page";
 import Register from "../register-page/register-page";
-import Pet from "../pet-page/pet-page";
+import PetAdd from "../pet-page/pet-add-page";
+import PetEdit from "../pet-page/pet-edit-page";
 import {createDrawerNavigator} from "react-navigation";
 const  plus  = require('../../../public/plus.png')
 const  homeIcon  = require('../../../public/logo.png')
@@ -41,7 +42,12 @@ const cards = [
 
      handlePetProfile =(id) => {
          var {navigate} = this.props.navigation;
-         navigate("Pet",{id:id})
+
+         if(id ==undefined){
+             navigate("PetAdd",{})
+        }else{
+             navigate("PetEdit",{id:id})
+         }
      }
 
      static navigationOptions = {

@@ -1,30 +1,21 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, Form, Item,ImageBackground, Input, Label, Button, Text, View } from 'native-base';
-import { createStackNavigator } from 'react-navigation';
+import {createStackNavigator, DrawerActions, NavigationActions} from 'react-navigation';
 import {StyleSheet} from "react-native";
 import {Constants} from "expo";
 const  petIcon  = require('../../../public/logo.png')
 
-class Pet extends React.Component {
+class PetAdd extends React.Component {
 
 
-    Next(){
-
-        //here register user and navigate to sliders
-
-        var {navigate} = this.props.navigation;
-        navigate("Home",{})
+    navigateToScreen = (route) => () => {
+        const navigateAction = NavigationActions.navigate({
+            routeName: route
+        });
+        this.props.navigation.dispatch(navigateAction);
+        this.props.navigation.dispatch(DrawerActions.closeDrawer())
     }
 
-    static navigationOptions = {
-        drawerLabel: 'Pet',
-        drawerIcon: ({ tintColor }) => (
-            <ImageBackground
-                source={petIcon}
-                style={[styles.icon, {tintColor: tintColor}]}
-            />
-        ),
-    };
     render(){
 
 
@@ -34,10 +25,10 @@ class Pet extends React.Component {
                 <Content>
                     <Form>
                         <Item floatingLabel>
-                            <Label>Pet page</Label>
+                            <Label>Pet add page</Label>
                         </Item>
 
-                        <Button onPress={this.Next} bordered info>
+                        <Button onPress={this.navigateToScreen('Home')} bordered info>
                             <Text>Next</Text>
                         </Button>
                     </Form>
@@ -54,7 +45,7 @@ const styles = StyleSheet.create({
     }
 });
 
- export default Pet
+ export default PetAdd
 
 
 
