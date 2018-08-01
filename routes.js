@@ -5,8 +5,8 @@ import {View,Text,StyleSheet,Platform,TouchableOpacity,Image,StatusBar} from 're
 
 import LoginPage from "./src/pages/login-page/login-page";
 import MainPage from "./src/pages/main-page/main-page";
-import Slider from "./src/pages/slider-page/slider-page";
-import Register from "./src/pages/register-page/register-page";
+import SliderPage from "./src/pages/slider-page/slider-page";
+import RegisterPage from "./src/pages/register-page/register-page";
 import PetAddPage from "./src/pages/pet-page/pet-add-page";
 import PetEditPage from "./src/pages/pet-page/pet-edit-page";
 import DrawerScreen from './src/pages/drawer-page/drawer-page';
@@ -16,8 +16,8 @@ const leftIcon = require('./src/images/left-arrow.png')
 const Tabs = createMaterialTopTabNavigator({
     Home: MainPage,
     Login: LoginPage,
-    Slider: Slider,
-    Register:Register,
+    Slider: SliderPage,
+    Register:RegisterPage,
     PetAdd:PetAddPage,
     PetEdit:PetEditPage
 },{
@@ -45,6 +45,12 @@ const DrawerNavigator = createDrawerNavigator({
     },
     PetEdit: {
         screen: PetEditPage
+    },
+    Slider: {
+        screen: SliderPage
+    },
+    Register: {
+        screen: RegisterPage
     }
 },{
     initialRouteName: 'Home',

@@ -2,12 +2,8 @@ import React, { Component } from "react";
 import { Container, Header, View, DeckSwiper,ImageBackground, Card, CardItem,Drawer, Thumbnail, Text, Left,Right, Body, Icon,Content ,Button, Title } from 'native-base';
 import { StyleSheet, Image, TouchableHighlight } from 'react-native';
 import { Constants } from 'expo';
-import LoginPage from "../login-page/login-page";
-import Slider from "../slider-page/slider-page";
-import Register from "../register-page/register-page";
 import PetAdd from "../pet-page/pet-add-page";
 import PetEdit from "../pet-page/pet-edit-page";
-import {createDrawerNavigator} from "react-navigation";
 const  plus  = require('../../../public/plus.png')
 const  homeIcon  = require('../../../public/logo.png')
 

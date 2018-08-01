@@ -14,7 +14,7 @@ class Slider extends Component {
 
         var {navigate} = this.props.navigation;
         return (
-            <Swiper style={styles.wrapper} showsButtons={false}>
+            <Swiper style={styles.wrapper} showsButtons={false} loop={false}>
                 <View style={styles.slide1}>
                     <Text style={styles.text}>Hello Swiper</Text>
                 </View>
